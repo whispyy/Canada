@@ -2,7 +2,7 @@ import {Component} from 'angular2/core';
 
 @Component({
 	selector: 'card',
-	templateUrl: 'app/component/card/card-component.html',
+	templateUrl: 'app/components/card/card-component.html',
 	providers: []
 
 })
