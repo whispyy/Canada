@@ -1,8 +1,13 @@
 import {Component} from 'angular2/core';
 
+// views
+import {Home} from './home/home';
+
 @Component({
     selector: 'my-app',
-    template: '<h1>Angular 2 Template</h1>'
+    template: '<home></home>',
+    directives:[Home]
 })
 
-export class AppComponent {}
+export class AppComponent {
+}
