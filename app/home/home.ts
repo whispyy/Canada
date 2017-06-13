@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component, Output} from 'angular2/core';
 
 // components
 import {CardComponent} from '../components/card/card.component';
@@ -14,6 +14,9 @@ import {NavBarComponent} from '../components/nav-bar/nav-bar.component';
 })
 
 export class Home {
-	
+
 	constructor() {}
+
+	ngOnInit() {
+	}
 }

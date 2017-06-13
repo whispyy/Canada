@@ -1,11 +1,26 @@
 <!-- nav component -->
+<div class="navbar-fixed">
 <nav class="indigo">
 	<div class="nav-wrapper">
-		<a href="#" class="brand-logo">Logo</a>
+		<a href="#!/" class="brand-logo">Canada</a>
+
+		<!-- mobile use-->
+		<a href="#" data-activates="slide-out" class="button-collapse">
+			<i class="fa fa-bars fa-2x">Menu</i>
+		</a>
+
 		<ul id="nav-mobile" class="right hide-on-med-and-down">
 			<li *ngFor="#item of navItems" [ngClass]="{'active' : item.active}">
 				<a href="#{{item.url}}">{{item.name}}</a>
 			</li>
-		</ul>
+		</ul>     
 	</div>
 </nav>
+</div>
+
+<!-- nav mobile side-->
+<ul id="slide-out" class="side-nav">
+	<li *ngFor="#item of navItems" [ngClass]="{'active' : item.active}">
+		<a href="#{{item.url}}">{{item.name}}</a>
+	</li>
+</ul>
