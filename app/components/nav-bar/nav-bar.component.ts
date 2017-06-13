@@ -18,6 +18,7 @@ export class NavBarComponent {
 
 	ngOnInit() {
 		this.setItems();
+		this.activate(0);
 	}
 
 	setItems() {
@@ -26,9 +27,15 @@ export class NavBarComponent {
 		this.navItems.push({name: "FR->QC", url: "/FRQC", active: false});
 	}
 
-	activate(navItem) {
-		this.setItems;
-		navItem.activate = true;
+	activate(index) {
+		if (this.navItems.length > index && index > -1) {
+			// reset all active item
+			this.navItems.forEach(function(el){
+				el.active = false;
+			});
+			// set the selected one.
+			this.navItems[index].active = true;
+		}
 	}
 
 }

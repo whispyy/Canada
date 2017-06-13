@@ -3,7 +3,7 @@
 	<div class="nav-wrapper">
 		<a href="#" class="brand-logo">Logo</a>
 		<ul id="nav-mobile" class="right hide-on-med-and-down">
-			<li *ngFor="#item of navItems" class="{'active' : item.active}">
+			<li *ngFor="#item of navItems" [ngClass]="{'active' : item.active}">
 				<a href="#{{item.url}}">{{item.name}}</a>
 			</li>
 		</ul>
