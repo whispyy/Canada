@@ -3,9 +3,9 @@
 	<div class="nav-wrapper">
 		<a href="#" class="brand-logo">Logo</a>
 		<ul id="nav-mobile" class="right hide-on-med-and-down">
-			<li><a href="/">Home</a></li>
-			<li><a href="gallery">Gallery</a></li>
-			<li><a href="FRQC">FR->QC</a></li>
+			<li *ngFor="#item of navItems" class="{'active' : item.active}">
+				<a href="#{{item.url}}">{{item.name}}</a>
+			</li>
 		</ul>
 	</div>
 </nav>
