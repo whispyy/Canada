@@ -25,6 +25,8 @@ export class CardComponent {
 	}
 }
 
+// Example of object :
+//
 // item {
 // 	title: String,
 // 	image: String,

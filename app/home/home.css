@@ -1,0 +1,36 @@
+.home-cards-container {
+	display: flex;
+	justify-content: flex-start;
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+.home-card {
+	margin: 10px;
+}
+
+@media screen and (max-width: 640px) {
+	.home-card {
+		max-width: 100%;
+
+	}
+}
+
+@media screen and (min-width: 640px) and (max-width: 800px){
+	.home-card {
+		max-width: 45%;
+	}
+}
+
+@media screen and (min-width: 800px) and (max-width: 1280px) {
+	.home-card {
+		max-width: 30%;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.home-card {
+		max-width: 22%;
+
+	}
+}
