@@ -1,4 +1,8 @@
 <nav-bar [active]="0"></nav-bar>
-<h1>Home</h1>
 
-<card></card>
+<div class="container">
+	<h1>Home</h1>
+	<div class="card-container" *ngFor="#card of cards">
+		<card [item]="card"></card>
+	</div>
+</div>

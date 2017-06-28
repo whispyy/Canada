@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component, Input} from 'angular2/core';
 
 @Component({
 	selector: 'card',
@@ -9,5 +9,28 @@ import {Component} from 'angular2/core';
 
 export class CardComponent {
 	
-	constructor() {}
+	@Input()
+	item: Object;
+
+	constructor() {
+		this.item = {};
+	}
+
+	ngOnInit() {
+		this.initCard(this.item);
+	}
+
+	initCard(item: Object) {
+		this.item = item;
+	}
 }
+
+// item {
+// 	title: String,
+// 	image: String,
+// 	link : {
+// 		name: String,
+// 		url: String
+// 	},
+// 	text: String
+// }
