@@ -17,13 +17,16 @@ import {ListComponent} from '../components/list/list.component';
 export class Home {
 
 	cards: Object[]
+	list: Object[]
 
 	constructor() {
 		this.cards = [];
+		this.list = [];
 	}
 
 	ngOnInit() {
 		this.initCards();
+		this.initList();
 	}
 
 	initCards(){
@@ -41,6 +44,28 @@ export class Home {
 						}, 
 						image: 'content/images/flag_ca.png', 
 						text: 'this is the second card displaying the canadian flag !'};
-		this.cards.push(test1, test2);
+		const test3 = {title: 'card  Title', 
+						link: {
+							name: 'link name', 
+							url: 'content/images/flag_ca.png'
+						}, 
+						image: 'content/images/flag_ca.png', 
+						text: 'this is the third card displaying the canadian flag !'};
+		this.cards.push(test1, test2, test3);
+	}
+
+	initList(){
+		const item1 = {
+			name: "Canada",
+			url: "blabla",
+			active:false
+		};
+		const item2 = {
+			name: "Québec",
+			url: "blabla",
+			active:true
+		};
+
+		this.list.push(item1, item2);
 	}
 }

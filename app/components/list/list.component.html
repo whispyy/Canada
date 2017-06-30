@@ -1,6 +1,12 @@
-<ul class="collection">
+<!-- <ul class="collection">
   <li class="collection-item">Alvin</li>
   <li class="collection-item">Alvin</li>
   <li class="collection-item">Alvin</li>
   <li class="collection-item">Alvin</li>
-</ul>
+</ul> -->
+<div class="collection">
+	<a class="collection-item" 
+	   href="{{item.url}}" 
+	   *ngFor="#item of items" 
+	   [ngClass]="{'active' : item.active}">{{item.name}}</a>
+</div>

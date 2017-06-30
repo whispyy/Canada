@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component, Input} from 'angular2/core';
 
 @Component({
 	selector: 'list',
@@ -9,4 +9,26 @@ import {Component} from 'angular2/core';
 
 export class ListComponent {
 
+	@Input()
+	items: Object[]
+
+	constructor () {
+		this.items = [];
+	}
+
+	ngOnInit () {
+		this.initList(this.items);
+	}
+
+	initList(items: Object[]) {
+		this.items = items;
+	}
 }
+
+// const items = [
+// 	{
+// 		name: "item name",
+// 		url: "item.url",
+//		active: false,
+// 	}
+// ]
